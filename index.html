@@ -23,19 +23,19 @@ h1{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(34px,6vw,52px);lin
 section{padding:44px 0;border-bottom:1px solid var(--line)}
 h2{font-family:"Source Serif 4",Georgia,serif;font-size:28px;margin:0 0 16px;font-weight:600}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 8px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 20px 20px}
 .stat .n{font-family:"Source Serif 4",Georgia,serif;font-size:44px;font-weight:700;line-height:1;color:var(--accent)}
 .stat .n.hi{color:var(--accent2)}
 .stat .n .u{font-family:Inter,system-ui,sans-serif;font-size:15px;font-weight:500;color:var(--muted);margin-left:8px;letter-spacing:0}
-.stat .l{font-size:14px;color:var(--muted);margin-top:8px}
-.stat .t{font-size:16px;font-weight:700;color:var(--ink);margin-top:10px}
+.stat .l{font-size:14px;color:var(--muted);margin-top:12px}
+.stat .t{font-size:16px;font-weight:700;color:var(--ink);margin-top:12px}
 .stat .a{font-size:13.5px;color:var(--muted)}
 .intro{font-family:"Source Serif 4",Georgia,serif;font-size:21px;font-weight:600;color:var(--ink);margin:4px 0 0;line-height:1.35}
 .gt{font-size:14px;font-weight:700;color:var(--ink);margin:18px 0 0}
 .dir{display:flex;align-items:center;gap:8px;font-size:12px;font-style:italic;color:var(--muted);margin-top:26px}
 .dir:before,.dir:after{content:"";flex:1;height:0;border-top:1.5px solid var(--muted)}
 .dir span{white-space:nowrap;order:-1}.dir:before{order:-2}.dir b{order:1;width:0;height:0;border-left:7px solid var(--muted);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:-9px}
-.bar{height:8px;background:var(--soft);border-radius:4px;margin-top:12px;overflow:hidden}.bar i{display:block;height:100%;background:currentColor}
+.bar{height:10px;background:var(--soft);border-radius:5px;margin-top:14px;overflow:hidden}.bar i{display:block;height:100%;background:currentColor}
 .note{font-size:14px;color:var(--muted)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
@@ -91,7 +91,7 @@ footer a{color:var(--accent)}
 <header>
   <p class="kicker">Pilot study · Chemical threats · AI safety</p>
   <h1>Does Claude's safety classifier mistake depth for danger?</h1>
-  <p class="lede">On benign chemical-threat questions, refusals climbed from 1% to 76% as the questions got more technical, landing hardest on the knowledge clinicians and students need most.</p>
+  <p class="lede">On 75 expert-screened, benign chemical-threat questions, refusals climbed from 1% to 76% as the questions got more technical, landing hardest on biomedical questions.</p>
   <div class="byline">Eduardo A González, PhD, chemical threat toxicology · November 2026</div>
   <div class="btns"><a class="btn primary" href="#results">See the results</a><a class="btn" href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/results.md">Full study</a><a class="btn" href="https://github.com/eagonzalez101/depth-vs-harm">Code and data</a></div>
 </header>
@@ -105,17 +105,17 @@ footer a{color:var(--accent)}
 <section id="results">
   <h2>Refusals rise with technical depth</h2>
   <div class="stats">
-    <div class="stat" style="color:var(--accent)"><div class="n">1%<span class="u">refused</span></div><div class="t">Less technical prompts</div><div class="a">(General public)</div><div class="l">1 of 75 responses</div><div class="bar"><i style="width:1.3%"></i></div></div>
-    <div class="stat" style="color:var(--accent)"><div class="n">43%<span class="u">refused</span></div><div class="t">More technical prompts</div><div class="a">(College students)</div><div class="l">32 of 75 responses</div><div class="bar"><i style="width:42.7%"></i></div></div>
-    <div class="stat" style="color:var(--accent2)"><div class="n hi">76%<span class="u">refused</span></div><div class="t">Highly technical prompts</div><div class="a">(Clinicians or researchers)</div><div class="l">57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
+    <div class="stat" style="color:var(--accent)"><div class="n">1%<span class="u">refused</span></div><div class="t">Less technical prompts</div><div class="a">General public</div><div class="l">1 of 75 responses</div><div class="bar"><i style="width:1.3%"></i></div></div>
+    <div class="stat" style="color:var(--accent)"><div class="n">43%<span class="u">refused</span></div><div class="t">More technical prompts</div><div class="a">College students</div><div class="l">32 of 75 responses</div><div class="bar"><i style="width:42.7%"></i></div></div>
+    <div class="stat" style="color:var(--accent2)"><div class="n hi">76%<span class="u">refused</span></div><div class="t">Highly technical prompts</div><div class="a">Clinicians or researchers</div><div class="l">57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
   </div>
-  <p class="note">Classifier refusals across 25 topics × 3 depths × 3 runs. Within-topic permutation test, p &lt; 0.0001. No topic was ever refused less at a deeper level.</p>
+  <p class="note">A refusal means Claude's API safety classifier blocked the response, not that the prompt was judged harmful. Classifier refusals across 25 topics × 3 depths × 3 runs. Within-topic permutation test, p &lt; 0.0001. No topic was ever refused less at a deeper level.</p>
 </section>
 
 <section>
-  <h2>Evidence that depth itself drives refusals</h2>
+  <h2>Refusals track blind-rated technical depth</h2>
   <div class="two">
-    <div class="card"><h3>Same pattern on the expert's own scale</h3><p>As a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths.</p>
+    <div class="card"><h3>Same pattern with blind depth ratings</h3><p>As a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths.</p>
       <div class="gt">Refusals: 0% → 81%</div><div class="minibars" role="img" aria-label="Share of responses refused by depth rating: 1, 0%; 2, 3%; 3, 43%; 4, 73%; 5, 81%"><div class="mb"><span class="v">0%</span><i style="height:2px"></i><span class="k">1</span></div><div class="mb"><span class="v">3%</span><i style="height:2px"></i><span class="k">2</span></div><div class="mb"><span class="v">43%</span><i style="height:34px"></i><span class="k">3</span></div><div class="mb"><span class="v">73%</span><i style="height:58px"></i><span class="k">4</span></div><div class="mb"><span class="v">81%</span><i style="height:65px"></i><span class="k">5</span></div></div><div class="dir"><span>Increasing technical depth</span><b></b></div><div class="mbcap" style="margin-top:10px">Responses refused, by blind depth rating (1–5)</div><div class="stt">Spearman ρ = 0.66, p &lt; 0.0001; within levels, p = 0.007</div></div>
     <div class="card"><h3>Refused prompts had higher blind depth ratings, even within a depth level</h3><p>Within the college-level prompts alone, the answered ones averaged 2.4 on the expert's 1–5 scale. The refused ones averaged 3.3. Their average length was about the same.</p>
 <div class="gt">Depth rating: 2.4 vs 3.3</div><div class="track"><div class="line"></div><span class="tk" style="left:0.0%">1</span><span class="tk" style="left:25.0%">2</span><span class="tk" style="left:50.0%">3</span><span class="tk" style="left:75.0%">4</span><span class="tk" style="left:100.0%">5</span>

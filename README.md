@@ -6,7 +6,7 @@ A pilot study of over-refusal on benign chemical-threat questions · Eduardo A G
 
 ## Key finding
 
-On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinician or researcher).** Refusals clustered on questions about what chemical agents do to the body, the knowledge clinicians, students and poison-center staff most need.
+On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinician or researcher).** Refusals clustered on questions about what chemical agents do to the body. A refusal means Claude's API safety classifier blocked the response, not that the prompt was judged harmful.
 
 ![Refusals rise with technical depth: 1% of less technical, 43% of more technical and 76% of highly technical prompts refused](figures/refusal_by_level.png)
 
@@ -34,9 +34,9 @@ Safety filters are meant to block information that helps cause harm. If they tre
 
 The trend was highly significant (within-topic permutation test, p < 0.0001), and it held in every subset. No topic was ever refused less at a deeper level.
 
-### Evidence that depth itself drives refusals
+### Refusals track blind-rated technical depth
 
-- **Same pattern on the expert's own scale:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (Spearman ρ = 0.66, p < 0.0001; within levels, p = 0.007).
+- **Same pattern with blind depth ratings:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (Spearman ρ = 0.66, p < 0.0001; within levels, p = 0.007).
 - **Refused prompts had higher blind depth ratings, even within a depth level:** within the college-level prompts alone, the answered ones averaged 2.4 on the expert's 1–5 scale and the refused ones averaged 3.3, at about the same average length (permutation test, p = 0.004).
 
 ### Refusals concentrate on biomedical questions
