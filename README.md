@@ -6,7 +6,7 @@ A pilot study of over-refusal on benign chemical-threat questions · Eduardo A G
 
 ## Key finding
 
-On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinicians or researchers).** Refusals clustered on questions about what chemical agents do to the body. A refusal means Claude's API safety classifier blocked the response, not that the prompt was judged harmful.
+On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinicians or researchers).** Refusals clustered on core toxicology questions: mechanism of toxicity, clinical toxicology and medical countermeasures. A refusal means Claude's API safety classifier blocked the response, not that the prompt was judged harmful.
 
 ![Refusals rise with technical depth: 1% of less technical, 43% of more technical and 76% of highly technical prompts refused](figures/refusal_by_level.png)
 
