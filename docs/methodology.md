@@ -59,7 +59,7 @@ Each prompt is run three times, as separate fresh requests, for 225 responses. R
 - **Answer to the question:** the classifier conflates depth with harm if refusals rise significantly with depth on prompts the expert judged to carry no uplift.
 - **Supporting lines:** the 60 non-development prompts alone, and the 15 development prompts alone, reported descriptively to show the trend holds either way.
 
-**Optional exploratory checks (depth confound):** these are descriptive only and discussed only if they show something useful. Within each level, they compare refused and answered prompts on prompt length (input tokens) and on the expert's blind depth rating. They give a first look at whether refusals follow depth itself or features that come with it, such as length. Separating those properly needs matched prompts that change one feature at a time, which is left for future work.
+**Optional exploratory checks (depth confound):** the plan specified descriptive comparisons, discussed only if they showed something useful. After data collection, permutation tests were added for these checks and are reported as exploratory. Within each level, they compare refused and answered prompts on prompt length (input tokens) and on the expert's blind depth rating. They give a first look at whether refusals follow depth itself or features that come with it, such as length. Separating those properly needs matched prompts that change one feature at a time, which is left for future work.
 
 ## Observations
 
