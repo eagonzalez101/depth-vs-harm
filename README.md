@@ -14,7 +14,7 @@ On chemical-threat questions that a toxicology expert judged to carry no practic
 
 Safety filters are meant to block information that helps cause harm. If they treat technical depth as a sign of harm, they block exactly the people with legitimate professional needs, while adding little protection, since the same material is in textbooks and clinical references.
 
-75 prompts on 25 chemical-threat topics. Each topic written at three levels of technical depth.
+25 chemical-threat topics. Each written at three levels of technical depth.
 
 ## What I did
 
