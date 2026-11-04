@@ -6,9 +6,11 @@ A pilot study of over-refusal on benign chemical-threat questions · Eduardo, Ph
 
 ## Key finding
 
-On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% at public level, 43% at undergraduate level and 76% at graduate or clinician level.** Refusals clustered on questions about what chemical agents do to the body, the knowledge clinicians, students and poison-center staff most need.
+On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinician or researcher).** Refusals clustered on questions about what chemical agents do to the body, the knowledge clinicians, students and poison-center staff most need.
 
-![Classifier refusal rate by depth level](figures/refusal_by_level.png)
+25 chemical-threat questions. Each asked at three levels of technical depth.
+
+![Classifier refusal rate by technical depth](figures/refusal_by_level.png)
 
 ## Why it matters
 
@@ -16,24 +18,30 @@ Safety filters are meant to block information that helps cause harm. If they tre
 
 ## What I did
 
-- **75 prompts:** 25 benign chemical-threat topics, each written at three depth levels: public (L1), undergraduate (L2) and graduate or clinician (L3).
+- **75 prompts:** 25 benign chemical-threat questions, each written at three levels: less technical (general public), more technical (college students) and highly technical (clinician or researcher).
 - **Expert screen:** every prompt was checked for no practical uplift beyond public educational references and for a legitimate reason to ask.
-- **Depth check:** the expert also rated every prompt's depth from 1 to 5, blind to its level.
+- **Depth check:** the expert also rated every prompt's depth from 1 to 5, blind to its depth level.
 - **Model:** Claude Opus 5.5 through the Anthropic API, default settings, no system prompt, each prompt run three times (225 responses).
 - **Outcome:** whether the API's safety classifier refused the request.
 
 ## Results
 
-| Depth level | Classifier refusals |
+| Technical depth | Classifier refusals |
 | --- | --- |
-| L1 · Public | 1 of 75 (1%) |
-| L2 · Undergraduate | 32 of 75 (43%) |
-| L3 · Graduate or clinician | 57 of 75 (76%) |
+| Less technical (general public) | 1 of 75 (1%) |
+| More technical (college students) | 32 of 75 (43%) |
+| Highly technical (clinician or researcher) | 57 of 75 (76%) |
 
 The trend was highly significant (within-topic permutation test, p < 0.0001), and it held in every subset. No topic was ever refused less at a deeper level.
 
+### Evidence that depth itself drives refusals
+
 - **Same pattern on the expert's own scale:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (exploratory).
-- **Biomedical content:** every topic in clinical toxicology, medical countermeasures and mechanism of toxicity was refused at some level (15 of 15). Most topics on emergency response and policy were never refused (6 of 10), even at the same rated depth.
+- **Refused prompts were rated deeper, even at the same level:** among the more technical (college-level) prompts alone, the ones refused averaged 3.3 on the expert's 1–5 scale and the ones answered averaged 2.4, at about the same length (exploratory).
+
+### Refusals concentrate on biomedical questions
+
+Questions about what chemical agents do to the body were refused about three times as often as questions about emergency response and policy. Share of responses refused across all three depths: mechanism of toxicity 59%, medical countermeasures 56%, clinical toxicology 50%, detection and decontamination 20%, history and policy 13%.
 
 ## How it was controlled
 
@@ -45,7 +53,7 @@ The trend was highly significant (within-topic permutation test, p < 0.0001), an
 ## Limitations
 
 - One expert chose topics, screened prompts and rated depth, with no second rater.
-- Deeper questions are also more specific, so depth can't be fully separated from specificity and vocabulary.
+- More technical questions are also more specific, so depth can't be fully separated from specificity and vocabulary.
 - Results apply to one model and one classifier at one point in time.
 
 ## Full study
