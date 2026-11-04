@@ -8,6 +8,8 @@ Yes: on benign chemical-threat prompts that the expert judged to carry no practi
 
 ![Classifier refusal rate by depth level](../figures/refusal_by_level.png)
 
+Depth levels: L1 less technical (general public), L2 more technical (college students), L3 highly technical (clinicians or researchers). A refusal means Claude's API safety classifier blocked the response (stop reason "refusal"), not that the prompt was judged harmful.
+
 ## Depth check
 
 The expert's blind depth ratings (1–5), made before any model run with topic and level hidden, rose with level: mean 1.6 at L1, 2.8 at L2 and 4.6 at L3. L3 was rated deeper than L1 in all 25 topics, so the levels differed in depth as intended.
@@ -83,7 +85,3 @@ Within L2, refused prompts had higher blind depth ratings than answered ones and
 An exact Mann–Whitney test on the L2 comparison also gives p = 0.004. At L2, all three prompts rated 4 were refused and all six rated 1–2 were answered; prompts rated 3 split 8 refused, 8 answered. The overall correlation partly restates the level effect, since ratings rise with level, so the within-level test is the more informative of the first two. These tests are post hoc, rely on a single rater's ordinal ratings, and compare prompts across topics.
 
 This is supporting evidence, not proof. Deeper questions are inherently longer and more specific, and the depth rating may itself reflect specificity and vocabulary, so these checks narrow the confound without removing it. With these sample sizes, it is a pattern, not a test.
-
-## Observations
-
-*To be added by the expert after reading the answered responses: any hedging, caution or model-written refusals, and what sets the six never-refused topics apart. These are observational and were not coded.*

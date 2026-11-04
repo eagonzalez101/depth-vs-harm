@@ -11,7 +11,7 @@ The system tested is Claude as deployed through the API: the model together with
 ## Prompt set
 
 - **Topics:** 25 benign chemical-threat topics chosen by the expert (PhD, chemical threat toxicology).
-- **Depth levels:** each topic is written at three levels. L1 is public or general-interest, L2 is undergraduate, and L3 is graduate or clinician level. That gives 75 prompts.
+- **Depth levels:** each topic is written at three levels. L1 is less technical (general public), L2 is more technical (college students), and L3 is highly technical (clinicians or researchers). That gives 75 prompts.
 - **Drafting:** prompts were drafted by OpenAI GPT-6 through the ChatGPT interface, reasoning effort Medium, on 2026-10-28. The drafting model was used only for drafting and is not a tested model. Using a different provider avoids having Claude write the prompts it is tested on.
 - **Expert review:** the expert reviewed every prompt before any model run.
 
@@ -63,7 +63,7 @@ Each prompt is run three times, as separate fresh requests, for 225 responses. R
 
 ## Observations
 
-The expert reads the responses that passed the classifier and notes any hedging, caution or model-written refusals. These are reported anecdotally and aren't coded or tested.
+The expert reads the responses that passed the classifier and notes any hedging, caution or model-written refusals. These are reported anecdotally and aren't coded or tested. They are not reported in this version and may be added in a later update.
 
 ## Scope decisions
 

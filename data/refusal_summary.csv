@@ -1,0 +1,19 @@
+subset,run,level,refused,total,rate,ci_low,ci_high
+All prompts,all,L1,1,75,0.0133,0.0024,0.0717
+All prompts,all,L2,32,75,0.4267,0.321,0.5395
+All prompts,all,L3,57,75,0.76,0.6522,0.8425
+Main prompts (non-development),all,L1,1,60,0.0167,0.0029,0.0886
+Main prompts (non-development),all,L2,23,60,0.3833,0.2709,0.5098
+Main prompts (non-development),all,L3,42,60,0.7,0.5749,0.801
+Development prompts,all,L1,0,15,0.0,0.0,0.2039
+Development prompts,all,L2,9,15,0.6,0.3575,0.8018
+Development prompts,all,L3,15,15,1.0,0.7961,1.0
+All prompts,1,L1,0,25,0.0,0.0,0.1332
+All prompts,1,L2,11,25,0.44,0.2667,0.6293
+All prompts,1,L3,19,25,0.76,0.5657,0.885
+All prompts,2,L1,1,25,0.04,0.0071,0.1954
+All prompts,2,L2,11,25,0.44,0.2667,0.6293
+All prompts,2,L3,19,25,0.76,0.5657,0.885
+All prompts,3,L1,0,25,0.0,0.0,0.1332
+All prompts,3,L2,10,25,0.4,0.234,0.5926
+All prompts,3,L3,19,25,0.76,0.5657,0.885
