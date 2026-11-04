@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Depth vs Harm Pilot</title>
+<meta name="description" content="A pilot study of whether Claude's API safety classifier treats technical depth as harm on benign chemical-threat questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfaf7;--ink:#1d2228;--muted:#5d6670;--line:#e2ded6;--card:#fff;--accent:#1f5f6b;--accent2:#c4553a;--soft:#e9f1f2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181c;--ink:#e8ebee;--muted:#9aa4ad;--line:#2b333a;--card:#1b2026;--accent:#6fb7c2;--accent2:#e98a70;--soft:#1f2c30}}
+:root[data-theme="dark"]{--bg:#14181c;--ink:#e8ebee;--muted:#9aa4ad;--line:#2b333a;--card:#1b2026;--accent:#6fb7c2;--accent2:#e98a70;--soft:#1f2c30}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 14px}
+h1{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(34px,6vw,52px);line-height:1.1;margin:0 0 18px;font-weight:700}
+.lede{font-size:20px;color:var(--muted);margin:0 0 22px;max-width:680px}
+.byline{font-size:14px;color:var(--muted)}
+.btns{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;border:1px solid var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--bg)}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+h2{font-family:"Source Serif 4",Georgia,serif;font-size:28px;margin:0 0 16px;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 8px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 14px}
+.stat .n{font-family:"Source Serif 4",Georgia,serif;font-size:44px;font-weight:700;line-height:1;color:var(--accent)}
+.stat .n.hi{color:var(--accent2)}
+.stat .l{font-size:14px;color:var(--muted);margin-top:8px}
+.bar{height:8px;background:var(--soft);border-radius:4px;margin-top:12px;overflow:hidden}.bar i{display:block;height:100%;background:currentColor}
+.note{font-size:14px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h3{margin:0 0 6px;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card .big{font-family:"Source Serif 4",Georgia,serif;font-size:30px;font-weight:700;color:var(--ink);margin-bottom:4px}
+ul{padding-left:20px;margin:0}li{margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:500;font-size:13px}th.num{text-align:right}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle}
+footer{padding:36px 0 64px;font-size:14px;color:var(--muted)}
+footer a{color:var(--accent)}
+@media (max-width:640px){.stats,.two{grid-template-columns:1fr}header{padding-top:48px}}
+</style></head>
+<body>
+<div class="wrap">
+<header>
+  <p class="kicker">Pilot study · AI safety evaluation</p>
+  <h1>Does Claude's safety classifier mistake depth for danger?</h1>
+  <p class="lede">On benign chemical-threat questions, refusals climbed from 1% to 76% as the questions got more technical, landing hardest on the knowledge clinicians and students need most.</p>
+  <div class="byline">Eduardo, PhD, chemical threat toxicology · November 2026</div>
+  <div class="btns"><a class="btn primary" href="#results">See the results</a><a class="btn" href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/results.md">Full study</a><a class="btn" href="https://github.com/eagonzalez101/depth-vs-harm">Code and data</a></div>
+</header>
+
+<section>
+  <h2>The question</h2>
+  <p>Safety filters are meant to block information that helps cause harm. If they treat technical depth itself as a warning sign, they block the people with legitimate professional needs while adding little protection, since the same material sits in textbooks and clinical references. This pilot asks whether Claude's API safety classifier conflates technical depth with practical harm.</p>
+</section>
+
+<section id="results">
+  <h2>Refusals rise with depth</h2>
+  <div class="stats">
+    <div class="stat" style="color:var(--accent)"><div class="n">1%</div><div class="l">L1 · Public level<br>1 of 75 responses</div><div class="bar"><i style="width:1.3%"></i></div></div>
+    <div class="stat" style="color:var(--accent)"><div class="n">43%</div><div class="l">L2 · Undergraduate<br>32 of 75 responses</div><div class="bar"><i style="width:42.7%"></i></div></div>
+    <div class="stat" style="color:var(--accent2)"><div class="n hi">76%</div><div class="l">L3 · Graduate or clinician<br>57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
+  </div>
+  <p class="note">Classifier refusals across 25 topics × 3 depth levels × 3 runs. Within-topic permutation test, p &lt; 0.0001. No topic was ever refused less at a deeper level.</p>
+</section>
+
+<section>
+  <h2>Two findings beneath the headline</h2>
+  <div class="two">
+    <div class="card"><div class="big">3.3 vs 2.4</div><h3>Depth, not length</h3><p>Among undergraduate-level prompts, the refused ones had been rated deeper (blind, before any run) but were about the same length as those answered.</p></div>
+    <div class="card"><div class="big">15 of 15</div><h3>Biomedical topics refused</h3><p>Every topic about what agents do to the body was refused at some level. Most emergency-response and policy topics (6 of 10) never were, even at the same rated depth.</p></div>
+  </div>
+  <table style="margin-top:22px">
+    <tr><th>Domain</th><th class="num">Topics</th><th class="num">Refused from L2</th><th class="num">L3 only</th><th class="num">Never</th></tr>
+    <tr><td><span class="dot" style="background:var(--accent2)"></span>Clinical toxicology</td><td class="num">4</td><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
+    <tr><td><span class="dot" style="background:var(--accent2)"></span>Medical countermeasures</td><td class="num">4</td><td class="num">3</td><td class="num">1</td><td class="num">0</td></tr>
+    <tr><td><span class="dot" style="background:var(--accent2)"></span>Mechanism of toxicity</td><td class="num">7</td><td class="num">5</td><td class="num">2</td><td class="num">0</td></tr>
+    <tr><td><span class="dot" style="background:var(--accent)"></span>Detection and decontamination</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num">3</td></tr>
+    <tr><td><span class="dot" style="background:var(--accent)"></span>History and policy</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td class="num">3</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>How it was done</h2>
+  <div class="two">
+    <div><h3 style="margin:0 0 8px;font-size:17px">Design</h3><ul>
+      <li>25 benign topics, each at public, undergraduate and graduate depth: 75 prompts</li>
+      <li>Expert screen: no practical uplift, legitimate reason to ask</li>
+      <li>Claude Opus 5.5 via the API, no system prompt, three runs each</li>
+      <li>Outcome: whether the safety classifier refused</li></ul></div>
+    <div><h3 style="margin:0 0 8px;font-size:17px">Controls</h3><ul>
+      <li>Depth rated blind, before any model run</li>
+      <li>Prompts drafted by a different company's model</li>
+      <li>Refusal fallbacks disabled</li>
+      <li>Randomized order; 73 of 75 prompts gave the same outcome every run</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>One expert chose topics, screened prompts and rated depth, with no second rater.</li>
+    <li>Deeper questions are also more specific, so depth can't be fully separated from specificity.</li>
+    <li>Results apply to one model and classifier at one point in time.</li>
+  </ul>
+</section>
+
+<footer>Full methods, complete results, analysis scripts and data are in the <a href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/methodology.md">methodology</a>, the <a href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/results.md">full results</a> and the <a href="https://github.com/eagonzalez101/depth-vs-harm">GitHub repository</a>.</footer>
+</div>
+</body></html>

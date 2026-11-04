@@ -1,0 +1,18 @@
+# secrets
+.env
+*.key
+
+# python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# raw run outputs and workbooks stay local until reviewed
+*_results/
+results/
+*.xlsx
+~$*
+
+# macOS
+.DS_Store
