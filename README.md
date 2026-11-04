@@ -65,6 +65,10 @@ Core toxicology questions were refused about three times as often as emergency r
 | [`scripts/`](scripts/) | Prompt runner and analysis scripts |
 | [`data/`](data/) | Per-prompt outcomes and refusal summary (no prompt text) |
 
+## How to cite
+
+González EA. Does Claude's safety classifier mistake depth for danger? A pilot study. November 2026. https://eagonzalez101.github.io/depth-vs-harm/
+
 ## Reproducing the analysis
 
 ```
