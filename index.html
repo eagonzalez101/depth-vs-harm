@@ -77,7 +77,7 @@ footer a{color:var(--accent)}
 <section>
   <h2>Two findings beneath the headline</h2>
   <div class="two">
-    <div class="card"><div class="big">0% → 81%</div><h3>Refusals track expert-rated depth</h3><p>The expert rated every prompt's depth from 1 (news level) to 5 (specialist), blind and before any run. Refusals climbed with that rating, while prompt length made little difference.</p>
+    <div class="card"><div class="big">0% → 81%</div><h3>Same pattern on the expert's own scale</h3><p>As a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, while prompt length made little difference.</p>
       <div class="minibars" role="img" aria-label="Share of responses refused by depth rating: 1, 0%; 2, 3%; 3, 43%; 4, 73%; 5, 81%"><div class="mb"><span class="v">0%</span><i style="height:2px"></i><span class="k">1</span></div><div class="mb"><span class="v">3%</span><i style="height:2px"></i><span class="k">2</span></div><div class="mb"><span class="v">43%</span><i style="height:34px"></i><span class="k">3</span></div><div class="mb"><span class="v">73%</span><i style="height:58px"></i><span class="k">4</span></div><div class="mb"><span class="v">81%</span><i style="height:65px"></i><span class="k">5</span></div></div><div class="mbcap">Responses refused, by blind depth rating (1–5)</div></div>
     <div class="card"><div class="big">15 of 15</div><h3>Biomedical topics refused</h3><p>Every topic about what agents do to the body was refused at some level. Most emergency-response and policy topics (6 of 10) never were, even at the same rated depth.</p></div>
   </div>
@@ -97,6 +97,7 @@ footer a{color:var(--accent)}
     <div><h3 style="margin:0 0 8px;font-size:17px">Design</h3><ul>
       <li>25 benign topics, each at public, undergraduate and graduate depth: 75 prompts</li>
       <li>Expert screen: no practical uplift, legitimate reason to ask</li>
+      <li>Depth check: the expert rated every prompt 1–5, blind to its level</li>
       <li>Claude Opus 5.5 via the API, no system prompt, three runs each</li>
       <li>Outcome: whether the safety classifier refused</li></ul></div>
     <div><h3 style="margin:0 0 8px;font-size:17px">Controls</h3><ul>

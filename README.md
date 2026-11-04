@@ -18,6 +18,7 @@ Safety filters are meant to block information that helps cause harm. If they tre
 
 - **75 prompts:** 25 benign chemical-threat topics, each written at three depth levels: public (L1), undergraduate (L2) and graduate or clinician (L3).
 - **Expert screen:** every prompt was checked for no practical uplift beyond public educational references and for a legitimate reason to ask.
+- **Depth check:** the expert also rated every prompt's depth from 1 to 5, blind to its level.
 - **Model:** Claude Opus 5.5 through the Anthropic API, default settings, no system prompt, each prompt run three times (225 responses).
 - **Outcome:** whether the API's safety classifier refused the request.
 
@@ -31,7 +32,7 @@ Safety filters are meant to block information that helps cause harm. If they tre
 
 The trend was highly significant (within-topic permutation test, p < 0.0001), and it held in every subset. No topic was ever refused less at a deeper level.
 
-- **Refusals track expert-rated depth:** the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind and before any run. Refusals climbed with that rating, from 0% of responses at rating 1 to 3%, 43%, 73% and 81% at rating 5 (exploratory).
+- **Same pattern on the expert's own scale:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (exploratory).
 - **Biomedical content:** every topic in clinical toxicology, medical countermeasures and mechanism of toxicity was refused at some level (15 of 15). Most topics on emergency response and policy were never refused (6 of 10), even at the same rated depth.
 
 ## How it was controlled
