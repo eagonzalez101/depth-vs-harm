@@ -85,7 +85,3 @@ Within L2, refused prompts had higher blind depth ratings than answered ones and
 An exact Mann–Whitney test on the L2 comparison also gives p = 0.004. At L2, all three prompts rated 4 were refused and all six rated 1–2 were answered; prompts rated 3 split 8 refused, 8 answered. The overall correlation partly restates the level effect, since ratings rise with level, so the within-level test is the more informative of the first two. These tests are post hoc, rely on a single rater's ordinal ratings, and compare prompts across topics.
 
 This is supporting evidence, not proof. Deeper questions are inherently longer and more specific, and the depth rating may itself reflect specificity and vocabulary, so these checks narrow the confound without removing it. With these sample sizes, it is a pattern, not a test.
-
-## Observations
-
-*To be added by the expert after reading the answered responses: any hedging, caution or model-written refusals, and what sets the six never-refused topics apart. These are observational and were not coded.*

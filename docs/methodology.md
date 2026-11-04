@@ -63,7 +63,7 @@ Each prompt is run three times, as separate fresh requests, for 225 responses. R
 
 ## Observations
 
-The expert reads the responses that passed the classifier and notes any hedging, caution or model-written refusals. These are reported anecdotally and aren't coded or tested.
+The expert reads the responses that passed the classifier and notes any hedging, caution or model-written refusals. These are reported anecdotally and aren't coded or tested. They are not reported in this version and may be added in a later update.
 
 ## Scope decisions
 
