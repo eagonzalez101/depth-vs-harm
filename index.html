@@ -97,17 +97,17 @@ footer a{color:var(--accent)}
 <section>
   <h2>The question</h2>
   <p>Safety filters are meant to block information that helps cause harm. If they treat technical depth itself as a warning sign, they block the people with legitimate professional needs while adding little protection, since the same material sits in textbooks and clinical references. This pilot asks whether Claude's API safety classifier conflates technical depth with practical harm.</p>
+  <p class="intro" style="margin-top:18px">75 prompts on 25 chemical-threat topics. Each topic written at three levels of technical depth.</p>
 </section>
 
 <section id="results">
-  <p class="intro">25 chemical-threat questions. Each asked at three levels of technical depth.</p>
-  <h2 style="margin-top:22px">Refusals rise with technical depth</h2>
+  <h2>Refusals rise with technical depth</h2>
   <div class="stats">
     <div class="stat" style="color:var(--accent)"><div class="n">1%</div><div class="t">Less technical</div><div class="a">(General public)</div><div class="l">1 of 75 responses</div><div class="bar"><i style="width:1.3%"></i></div></div>
     <div class="stat" style="color:var(--accent)"><div class="n">43%</div><div class="t">More technical</div><div class="a">(College students)</div><div class="l">32 of 75 responses</div><div class="bar"><i style="width:42.7%"></i></div></div>
     <div class="stat" style="color:var(--accent2)"><div class="n hi">76%</div><div class="t">Highly technical</div><div class="a">(Clinician or researcher)</div><div class="l">57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
   </div>
-  <p class="note">Classifier refusals across 25 questions × 3 depths × 3 runs. Within-topic permutation test, p &lt; 0.0001. No topic was ever refused less at a deeper level.</p>
+  <p class="note">Classifier refusals across 25 topics × 3 depths × 3 runs. Within-topic permutation test, p &lt; 0.0001. No topic was ever refused less at a deeper level.</p>
 </section>
 
 <section>
@@ -131,7 +131,7 @@ footer a{color:var(--accent)}
   <h2>How it was done</h2>
   <div class="two">
     <div><h3 style="margin:0 0 8px;font-size:17px">Design</h3><ul>
-      <li>25 benign chemical-threat questions, each written less, more and highly technical: 75 prompts</li>
+      <li>25 benign chemical-threat topics, each written less, more and highly technical: 75 prompts</li>
       <li>Expert screen: no practical uplift, legitimate reason to ask</li>
       <li>Depth check: the expert rated every prompt 1–5, blind to its level</li>
       <li>Claude Opus 5.5 via the API, no system prompt, three runs each</li>

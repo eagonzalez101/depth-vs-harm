@@ -8,17 +8,17 @@ A pilot study of over-refusal on benign chemical-threat questions · Eduardo, Ph
 
 On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinician or researcher).** Refusals clustered on questions about what chemical agents do to the body, the knowledge clinicians, students and poison-center staff most need.
 
-25 chemical-threat questions. Each asked at three levels of technical depth.
-
 ![Classifier refusal rate by technical depth](figures/refusal_by_level.png)
 
 ## Why it matters
 
 Safety filters are meant to block information that helps cause harm. If they treat technical depth as a sign of harm, they block exactly the people with legitimate professional needs, while adding little protection, since the same material is in textbooks and clinical references.
 
+75 prompts on 25 chemical-threat topics. Each topic written at three levels of technical depth.
+
 ## What I did
 
-- **75 prompts:** 25 benign chemical-threat questions, each written at three levels: less technical (general public), more technical (college students) and highly technical (clinician or researcher).
+- **75 prompts:** 25 benign chemical-threat topics, each written at three levels: less technical (general public), more technical (college students) and highly technical (clinician or researcher).
 - **Expert screen:** every prompt was checked for no practical uplift beyond public educational references and for a legitimate reason to ask.
 - **Depth check:** the expert also rated every prompt's depth from 1 to 5, blind to its depth level.
 - **Model:** Claude Opus 5.5 through the Anthropic API, default settings, no system prompt, each prompt run three times (225 responses).
