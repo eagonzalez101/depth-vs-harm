@@ -69,6 +69,10 @@ Core toxicology questions were refused about three times as often as emergency r
 
 González EA. Does Claude's safety classifier mistake depth for danger? A pilot study. November 2026. https://eagonzalez101.github.io/depth-vs-harm/
 
+## License
+
+Code is released under the [MIT License](LICENSE). Text, figures and data are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse is welcome with credit to Eduardo A González and a link to this repository.
+
 ## Reproducing the analysis
 
 ```
