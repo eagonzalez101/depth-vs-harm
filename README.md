@@ -37,7 +37,7 @@ The trend was highly significant (within-topic permutation test, p < 0.0001), an
 ### Evidence that depth itself drives refusals
 
 - **Same pattern on the expert's own scale:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (exploratory).
-- **Refused prompts had higher blind depth ratings by the expert, even within a depth level:** within the college-level prompts alone, the refused ones averaged 3.3 on the expert's 1–5 scale and the answered ones averaged 2.4, at about the same average length (exploratory).
+- **Refused prompts had higher blind depth ratings, even within a depth level:** within the college-level prompts alone, the answered ones averaged 2.4 on the expert's 1–5 scale and the refused ones averaged 3.3, at about the same average length (exploratory).
 
 ### Refusals concentrate on biomedical questions
 
