@@ -70,7 +70,7 @@ Deeper prompts are also longer and more specific, so refusals could follow any o
 | L2 | 11 | 14 | 43.6 vs 40.4 | 3.27 vs 2.43 |
 | L3 | 19 | 6 | 66.7 vs 62.8 | 4.63 vs 4.50 |
 
-Within L2, refused prompts had higher blind depth ratings than answered ones and a similar average length. At L3, nearly every prompt was rated 4–5, leaving little room for a difference. Among L1 and L2 prompts of similar length (32–50 tokens), refusals still climbed with the blind depth rating, from none at ratings 1–2 to 23 of 57 responses at rating 3 and 9 of 9 at rating 4.
+Within L2, refused prompts had higher blind depth ratings than answered ones and a similar average length. At L3, nearly every prompt was rated 4–5, leaving little room for a difference. Among L1 and L2 prompts of similar length (32–50 tokens), refusals still climbed with the blind depth rating: 0 of 30 responses refused at rating 1, 0 of 30 at rating 2, 23 of 57 (40%) at rating 3 and 9 of 9 (100%) at rating 4. No prompt in that length range was rated 5.
 
 This is supporting evidence, not proof. Deeper questions are inherently longer and more specific, and the depth rating may itself reflect specificity and vocabulary, so these checks narrow the confound without removing it. With these sample sizes, it is a pattern, not a test.
 
