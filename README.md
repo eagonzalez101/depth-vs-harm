@@ -34,10 +34,10 @@ Safety filters are meant to block information that helps cause harm. If they tre
 
 The trend was highly significant (within-topic permutation test, p < 0.0001), and it held in every subset. No topic was ever refused less at a deeper level.
 
-### Refusals track blind-rated technical depth
+### Evidence that depth drives refusals
 
-- **Same pattern with blind depth ratings:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (Spearman ρ = 0.66, p < 0.0001; within levels, p = 0.007).
-- **Refused prompts had higher blind depth ratings, even within a depth level:** within the college-level prompts alone, the answered ones averaged 2.4 on the expert's 1–5 scale and the refused ones averaged 3.3, at about the same average length (permutation test, p = 0.004).
+- **Refusals also track blind expert ratings:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (Spearman ρ = 0.66, p < 0.0001; within levels, p = 0.007).
+- **Refused prompts had higher blind depth ratings, even within a depth level:** within the college-level prompts alone, the answered ones averaged 2.4 on the expert's 1–5 scale and the refused ones averaged 3.3, at about the same average token length (permutation test, p = 0.004).
 
 ### Refusals concentrate on biomedical questions
 
