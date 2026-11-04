@@ -36,8 +36,8 @@ The trend was highly significant (within-topic permutation test, p < 0.0001), an
 
 ### Evidence that depth itself drives refusals
 
-- **Same pattern on the expert's own scale:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (exploratory).
-- **Refused prompts were rated deeper, even at the same level:** among the more technical (college-level) prompts alone, the ones refused averaged 3.3 on the expert's 1–5 scale and the ones answered averaged 2.4, at about the same length (exploratory).
+- **Same pattern on the expert's own scale:** as a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, even at similar lengths: 0%, 3%, 43%, 73% and 81% of responses at ratings 1 to 5 (exploratory).
+- **Refused prompts were rated deeper by the expert, even within a depth level:** within the college-level prompts alone, the refused ones averaged 3.3 on the expert's 1–5 scale and the answered ones averaged 2.4, at about the same average length (exploratory).
 
 ### Refusals concentrate on biomedical questions
 
@@ -53,7 +53,7 @@ Questions about what chemical agents do to the body were refused about three tim
 ## Limitations
 
 - One expert chose topics, screened prompts and rated depth, with no second rater.
-- More technical questions are also more specific, so depth can't be fully separated from specificity and vocabulary.
+- Deeper questions are also longer and more specific, so depth can't be fully separated from these variables.
 - Results apply to one model and one classifier at one point in time.
 
 ## Full study

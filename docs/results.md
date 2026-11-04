@@ -70,7 +70,23 @@ Deeper prompts are also longer and more specific, so refusals could follow any o
 | L2 | 11 | 14 | 43.6 vs 40.4 | 3.27 vs 2.43 |
 | L3 | 19 | 6 | 66.7 vs 62.8 | 4.63 vs 4.50 |
 
-Within L2, refused prompts had higher blind depth ratings than answered ones but similar length, suggesting refusals track perceived technical depth rather than prompt length. At L3, nearly every prompt was rated 4–5, leaving little room for a difference. The depth rating may itself reflect specificity and vocabulary, so this narrows the confound without removing it. With 11 and 14 prompts, it is a pattern, not a test.
+Within L2, refused prompts had higher blind depth ratings than answered ones and a similar average length. Length was not irrelevant, though: the longer half of L2 prompts (43–50 tokens) was refused on 20 of 36 responses and the shorter half (32–42 tokens) on 9 of 36. At L3, nearly every prompt was rated 4–5, leaving little room for a difference.
+
+**Refusals by length and level.** Share of responses refused, by prompt length (input tokens). L3 prompts were all 56–85 tokens and L1 and L2 prompts all 26–50, so L3 can't be compared with the other levels at matched length.
+
+| Length (tokens) | L1 | L2 | L3 |
+| --- | --- | --- | --- |
+| 26–34 | 1 of 48 (2%), 16 prompts | 0 of 6 (0%), 2 prompts | – |
+| 35–44 | 0 of 27 (0%), 9 prompts | 21 of 48 (44%), 16 prompts | – |
+| 45–54 | – | 11 of 21 (52%), 7 prompts | – |
+| 55–64 | – | – | 27 of 39 (69%), 13 prompts |
+| 65–85 | – | – | 30 of 36 (83%), 12 prompts |
+
+Where L1 and L2 prompts overlap in length (35–44 tokens), L1 prompts were refused 0 of 27 times and L2 prompts 21 of 48.
+
+**Blind depth rating at similar lengths.** Among prompts of 32–50 tokens, which span L1 and L2, responses were refused 0 of 30 times at rating 1, 0 of 30 at rating 2, 23 of 57 (40%) at rating 3 and 9 of 9 at rating 4.
+
+These checks are supporting evidence that refusals follow depth beyond length, not proof. Deeper questions are inherently longer and more detailed, and the depth rating may itself reflect specificity and vocabulary, so they narrow the confound without removing it. Separating them needs length-matched prompts, left for future work. With these sample sizes, it is a pattern, not a test.
 
 ## Observations
 
