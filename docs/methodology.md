@@ -1,6 +1,6 @@
 # Methodology: depth vs harm pilot
 
-Eduardo, PhD · November 2026 · [Results](results.md) · [Summary](../README.md)
+Eduardo A González, PhD · November 2026 · [Results](results.md) · [Summary](../README.md)
 
 ## Research question
 

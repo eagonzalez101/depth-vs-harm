@@ -1,6 +1,6 @@
 # Does Claude's safety classifier mistake depth for danger?
 
-A pilot study of over-refusal on benign chemical-threat questions · Eduardo, PhD, chemical threat toxicology · November 2026
+A pilot study of over-refusal on benign chemical-threat questions · Eduardo A González, PhD, chemical threat toxicology · November 2026
 
 **Project page:** https://eagonzalez101.github.io/depth-vs-harm/
 
