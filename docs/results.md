@@ -8,6 +8,8 @@ Yes: on benign chemical-threat prompts that the expert judged to carry no practi
 
 ![Classifier refusal rate by depth level](../figures/refusal_by_level.png)
 
+Depth levels: L1 less technical (general public), L2 more technical (college students), L3 highly technical (clinicians or researchers). A refusal means Claude's API safety classifier blocked the response (stop reason "refusal"), not that the prompt was judged harmful.
+
 ## Depth check
 
 The expert's blind depth ratings (1–5), made before any model run with topic and level hidden, rose with level: mean 1.6 at L1, 2.8 at L2 and 4.6 at L3. L3 was rated deeper than L1 in all 25 topics, so the levels differed in depth as intended.

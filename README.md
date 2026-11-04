@@ -6,7 +6,7 @@ A pilot study of over-refusal on benign chemical-threat questions · Eduardo A G
 
 ## Key finding
 
-On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinician or researcher).** Refusals clustered on questions about what chemical agents do to the body. A refusal means Claude's API safety classifier blocked the response, not that the prompt was judged harmful.
+On chemical-threat questions that a toxicology expert judged to carry no practical uplift, Claude's API safety classifier refused more often as the questions got more technical: **1% of less technical questions (general public), 43% of more technical ones (college students) and 76% of highly technical ones (clinicians or researchers).** Refusals clustered on questions about what chemical agents do to the body. A refusal means Claude's API safety classifier blocked the response, not that the prompt was judged harmful.
 
 ![Refusals rise with technical depth: 1% of less technical, 43% of more technical and 76% of highly technical prompts refused](figures/refusal_by_level.png)
 
@@ -18,7 +18,7 @@ Safety filters are meant to block information that helps cause harm. If they tre
 
 ## What I did
 
-- **75 prompts:** 25 benign chemical-threat topics, each written at three levels: less technical (general public), more technical (college students) and highly technical (clinician or researcher).
+- **75 prompts:** 25 benign chemical-threat topics, each written at three levels: less technical (general public), more technical (college students) and highly technical (clinicians or researchers).
 - **Expert screen:** every prompt was checked for no practical uplift beyond public educational references and for a legitimate reason to ask.
 - **Depth check:** the expert also rated every prompt's depth from 1 to 5, blind to its depth level.
 - **Model:** Claude Opus 5.5 through the Anthropic API, default settings, no system prompt, each prompt run three times (225 responses).
@@ -30,7 +30,7 @@ Safety filters are meant to block information that helps cause harm. If they tre
 | --- | --- |
 | Less technical (general public) | 1 of 75 (1%) |
 | More technical (college students) | 32 of 75 (43%) |
-| Highly technical (clinician or researcher) | 57 of 75 (76%) |
+| Highly technical (clinicians or researchers) | 57 of 75 (76%) |
 
 The trend was highly significant (within-topic permutation test, p < 0.0001), and it held in every subset. No topic was ever refused less at a deeper level.
 
@@ -63,7 +63,7 @@ Questions about what chemical agents do to the body were refused about three tim
 | [Methodology](docs/methodology.md) | Design, settings, analysis plan, scope decisions and limitations |
 | [Results](docs/results.md) | Full tables, trend tests, run consistency, topic and domain patterns, exploratory checks |
 | [`scripts/`](scripts/) | Prompt runner and analysis scripts |
-| [`data/`](data/) | Summary data |
+| [`data/`](data/) | Per-prompt outcomes and refusal summary (no prompt text) |
 
 ## Reproducing the analysis
 
@@ -77,4 +77,4 @@ python scripts/analyze_refusals.py results/responses.csv --dev T21,T22,T23,T24,T
 python scripts/topic_table.py results/responses.csv PROMPTS.xlsx --dev T21,T22,T23,T24,T25
 ```
 
-`PROMPTS.xlsx` holds the prompts on an `Items` sheet (`item_id`, `prompt_text`, blind depth rating) and the topics on a `Topics` sheet. The analysis scripts need only Python and openpyxl.
+`PROMPTS.xlsx` holds the prompts on an `Items` sheet (`item_id`, `prompt_text`, blind depth rating) and the topics on a `Topics` sheet. The analysis scripts need only Python and openpyxl. Prompt text isn't published, so re-running needs your own prompt workbook; every reported number can be checked from [`data/prompt_outcomes.csv`](data/prompt_outcomes.csv) without re-running.
