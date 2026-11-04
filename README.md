@@ -41,7 +41,7 @@ The trend was highly significant (within-topic permutation test, p < 0.0001), an
 
 ### Refusals concentrate on biomedical questions
 
-Questions about what chemical agents do to the body were refused about three times as often as questions about emergency response and policy. Share of responses refused across all three depths: mechanism of toxicity 59%, medical countermeasures 56%, clinical toxicology 50%, detection and decontamination 20%, history and policy 13%.
+Questions about what chemical agents do to the body were refused about three times as often as questions about emergency response and policy. Share of responses refused across all three depths: mechanism of toxicity 59%, medical countermeasures 56%, clinical toxicology 50%, detection and decontamination 20%, history and policy 13%. Six of ten response and policy topics were never refused, even when highly technical.
 
 ## How it was controlled
 
