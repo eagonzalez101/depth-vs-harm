@@ -82,4 +82,4 @@ The reason is time. The pilot was scoped to 1–2 weeks, and the classifier refu
 - **Not pre-registered:** the design was settled before any main-run data was collected, but it wasn't formally pre-registered.
 - **Development topics included:** five topics were used to develop the workflow before being rerun with the main set.
 - **One model and one point in time:** classifiers and models change, so results apply to this model ID on these dates.
-- **Depth, length and specificity:** deeper questions are also longer and more specific, so depth can't be fully separated from these variables. Exploratory checks at matched lengths are in the results.
+- **Depth, length and specificity:** deeper questions are also longer and more specific, so depth can't be fully separated from these variables. Each topic's three prompts concern the same agent, which holds the agent constant but not the specificity of what is asked. Exploratory checks at matched lengths are in the results. A follow-up study would add short prompts (about 32–50 tokens) rated 4–5, and pairs that keep depth fixed while varying specificity.
