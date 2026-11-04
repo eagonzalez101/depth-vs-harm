@@ -26,6 +26,7 @@ h2{font-family:"Source Serif 4",Georgia,serif;font-size:28px;margin:0 0 16px;fon
 .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 14px}
 .stat .n{font-family:"Source Serif 4",Georgia,serif;font-size:44px;font-weight:700;line-height:1;color:var(--accent)}
 .stat .n.hi{color:var(--accent2)}
+.stat .n .u{font-family:Inter,system-ui,sans-serif;font-size:15px;font-weight:500;color:var(--muted);margin-left:8px;letter-spacing:0}
 .stat .l{font-size:14px;color:var(--muted);margin-top:8px}
 .stat .t{font-size:16px;font-weight:700;color:var(--ink);margin-top:10px}
 .stat .a{font-size:13.5px;color:var(--muted)}
@@ -103,9 +104,9 @@ footer a{color:var(--accent)}
 <section id="results">
   <h2>Refusals rise with technical depth</h2>
   <div class="stats">
-    <div class="stat" style="color:var(--accent)"><div class="n">1%</div><div class="t">Less technical</div><div class="a">(General public)</div><div class="l">1 of 75 responses</div><div class="bar"><i style="width:1.3%"></i></div></div>
-    <div class="stat" style="color:var(--accent)"><div class="n">43%</div><div class="t">More technical</div><div class="a">(College students)</div><div class="l">32 of 75 responses</div><div class="bar"><i style="width:42.7%"></i></div></div>
-    <div class="stat" style="color:var(--accent2)"><div class="n hi">76%</div><div class="t">Highly technical</div><div class="a">(Clinician or researcher)</div><div class="l">57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
+    <div class="stat" style="color:var(--accent)"><div class="n">1%<span class="u">refused</span></div><div class="t">Less technical</div><div class="a">(General public)</div><div class="l">1 of 75 responses</div><div class="bar"><i style="width:1.3%"></i></div></div>
+    <div class="stat" style="color:var(--accent)"><div class="n">43%<span class="u">refused</span></div><div class="t">More technical</div><div class="a">(College students)</div><div class="l">32 of 75 responses</div><div class="bar"><i style="width:42.7%"></i></div></div>
+    <div class="stat" style="color:var(--accent2)"><div class="n hi">76%<span class="u">refused</span></div><div class="t">Highly technical</div><div class="a">(Clinician or researcher)</div><div class="l">57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
   </div>
   <p class="note">Classifier refusals across 25 topics × 3 depths × 3 runs. Within-topic permutation test, p &lt; 0.0001. No topic was ever refused less at a deeper level.</p>
 </section>
