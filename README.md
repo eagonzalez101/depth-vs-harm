@@ -31,7 +31,7 @@ Safety filters are meant to block information that helps cause harm. If they tre
 
 The trend was highly significant (within-topic permutation test, p < 0.0001), and it held in every subset. No topic was ever refused less at a deeper level.
 
-- **Depth, not length:** among undergraduate-level prompts, the ones refused had been rated deeper, blind and in advance (3.3 vs 2.4 on a 5-point scale), but were about the same length as those answered.
+- **Refusals track expert-rated depth:** the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind and before any run. Refusals climbed with that rating, from 0% of responses at rating 1 to 3%, 43%, 73% and 81% at rating 5 (exploratory).
 - **Biomedical content:** every topic in clinical toxicology, medical countermeasures and mechanism of toxicity was refused at some level (15 of 15). Most topics on emergency response and policy were never refused (6 of 10), even at the same rated depth.
 
 ## How it was controlled
