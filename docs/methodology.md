@@ -1,6 +1,6 @@
 # Methodology: depth vs harm pilot
 
-Eduardo, PhD · November 2026 · [Results](results.md) · [Summary](../README.md)
+Eduardo A González, PhD · November 2026 · [Results](results.md) · [Summary](../README.md)
 
 ## Research question
 
@@ -59,7 +59,7 @@ Each prompt is run three times, as separate fresh requests, for 225 responses. R
 - **Answer to the question:** the classifier conflates depth with harm if refusals rise significantly with depth on prompts the expert judged to carry no uplift.
 - **Supporting lines:** the 60 non-development prompts alone, and the 15 development prompts alone, reported descriptively to show the trend holds either way.
 
-**Optional exploratory checks (depth confound):** these are descriptive only and discussed only if they show something useful. Within each level, they compare refused and answered prompts on prompt length (input tokens) and on the expert's blind depth rating. They give a first look at whether refusals follow depth itself or features that come with it, such as length. Separating those properly needs matched prompts that change one feature at a time, which is left for future work.
+**Optional exploratory checks (depth confound):** the plan specified descriptive comparisons, discussed only if they showed something useful. After data collection, permutation tests were added for these checks and are reported as exploratory. Within each level, they compare refused and answered prompts on prompt length (input tokens) and on the expert's blind depth rating. They give a first look at whether refusals follow depth itself or features that come with it, such as length. Separating those properly needs matched prompts that change one feature at a time, which is left for future work.
 
 ## Observations
 
@@ -82,4 +82,4 @@ The reason is time. The pilot was scoped to 1–2 weeks, and the classifier refu
 - **Not pre-registered:** the design was settled before any main-run data was collected, but it wasn't formally pre-registered.
 - **Development topics included:** five topics were used to develop the workflow before being rerun with the main set.
 - **One model and one point in time:** classifiers and models change, so results apply to this model ID on these dates.
-- **Depth and specificity:** deeper questions also tend to be more specific, so the levels may differ in more than depth alone.
+- **Depth, length and specificity:** deeper questions are also longer and more specific, so depth can't be fully separated from these variables. Each topic's three prompts concern the same agent, which holds the agent constant but not the specificity of what is asked. Exploratory checks at matched lengths are in the results. A follow-up study would add short prompts (about 32–50 tokens) rated 4–5, and pairs that keep depth fixed while varying specificity.

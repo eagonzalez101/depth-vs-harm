@@ -1,6 +1,6 @@
 # Results: depth vs harm pilot
 
-Eduardo, PhD · November 2026 · [Methodology](methodology.md) · [Summary](../README.md)
+Eduardo A González, PhD · November 2026 · [Methodology](methodology.md) · [Summary](../README.md)
 
 ## Summary
 
@@ -70,7 +70,19 @@ Deeper prompts are also longer and more specific, so refusals could follow any o
 | L2 | 11 | 14 | 43.6 vs 40.4 | 3.27 vs 2.43 |
 | L3 | 19 | 6 | 66.7 vs 62.8 | 4.63 vs 4.50 |
 
-Within L2, refused prompts had higher blind depth ratings than answered ones but similar length, suggesting refusals track perceived technical depth rather than prompt length. At L3, nearly every prompt was rated 4–5, leaving little room for a difference. The depth rating may itself reflect specificity and vocabulary, so this narrows the confound without removing it. With 11 and 14 prompts, it is a pattern, not a test.
+Within L2, refused prompts had higher blind depth ratings than answered ones and a similar average length. At L3, nearly every prompt was rated 4–5, leaving little room for a difference. Among L1 and L2 prompts of similar length (32–50 tokens), refusals still climbed with the blind depth rating: 0 of 30 responses refused at rating 1, 0 of 30 at rating 2, 23 of 57 (40%) at rating 3 and 9 of 9 (100%) at rating 4. No prompt in that length range was rated 5.
+
+**Exploratory tests.** The plan specified descriptive comparisons for these checks. After data collection, three permutation tests were added; all three are reported here. Each prompt counts as refused if refused on most runs.
+
+| Check | Test | Result |
+| --- | --- | --- |
+| Refusals vs blind depth rating, all 75 prompts | Spearman correlation of refusals (0–3 runs) with rating, 20,000 permutations | ρ = 0.66, p < 0.0001 |
+| Same, holding level fixed | Ratings permuted within each level, 20,000 permutations | p = 0.007 |
+| L2 refused vs answered blind depth (3.3 vs 2.4; 11 vs 14 prompts) | Exact two-sided permutation test on the difference in means (all 4,457,400 splits) | p = 0.004 |
+
+An exact Mann–Whitney test on the L2 comparison also gives p = 0.004. At L2, all three prompts rated 4 were refused and all six rated 1–2 were answered; prompts rated 3 split 8 refused, 8 answered. The overall correlation partly restates the level effect, since ratings rise with level, so the within-level test is the more informative of the first two. These tests are post hoc, rely on a single rater's ordinal ratings, and compare prompts across topics.
+
+This is supporting evidence, not proof. Deeper questions are inherently longer and more specific, and the depth rating may itself reflect specificity and vocabulary, so these checks narrow the confound without removing it. With these sample sizes, it is a pattern, not a test.
 
 ## Observations
 
