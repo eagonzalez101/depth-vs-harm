@@ -34,6 +34,12 @@ h2{font-family:"Source Serif 4",Georgia,serif;font-size:28px;margin:0 0 16px;fon
 .card h3{margin:0 0 6px;font-size:17px}
 .card p{margin:0;color:var(--muted);font-size:15.5px}
 .card .big{font-family:"Source Serif 4",Georgia,serif;font-size:30px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.minibars{display:flex;gap:8px;align-items:flex-end;height:104px;margin:18px 0 0}
+.mb{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.mb i{display:block;width:100%;background:var(--accent);border-radius:4px 4px 0 0}
+.mb .v{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.mb .k{position:absolute;bottom:-20px;font-size:12px;color:var(--muted)}
+.mbcap{font-size:12px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:0}
 ul{padding-left:20px;margin:0}li{margin:6px 0}
 table{width:100%;border-collapse:collapse;font-size:15px}
 th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:500;font-size:13px}th.num{text-align:right}
@@ -71,7 +77,8 @@ footer a{color:var(--accent)}
 <section>
   <h2>Two findings beneath the headline</h2>
   <div class="two">
-    <div class="card"><div class="big">3.3 vs 2.4</div><h3>Depth, not length</h3><p>Among undergraduate-level prompts, the refused ones had been rated deeper (blind, before any run) but were about the same length as those answered.</p></div>
+    <div class="card"><div class="big">0% → 81%</div><h3>Refusals track expert-rated depth</h3><p>The expert rated every prompt's depth from 1 (news level) to 5 (specialist), blind and before any run. Refusals climbed with that rating, while prompt length made little difference.</p>
+      <div class="minibars" role="img" aria-label="Share of responses refused by depth rating: 1, 0%; 2, 3%; 3, 43%; 4, 73%; 5, 81%"><div class="mb"><span class="v">0%</span><i style="height:2px"></i><span class="k">1</span></div><div class="mb"><span class="v">3%</span><i style="height:2px"></i><span class="k">2</span></div><div class="mb"><span class="v">43%</span><i style="height:34px"></i><span class="k">3</span></div><div class="mb"><span class="v">73%</span><i style="height:58px"></i><span class="k">4</span></div><div class="mb"><span class="v">81%</span><i style="height:65px"></i><span class="k">5</span></div></div><div class="mbcap">Responses refused, by blind depth rating (1–5)</div></div>
     <div class="card"><div class="big">15 of 15</div><h3>Biomedical topics refused</h3><p>Every topic about what agents do to the body was refused at some level. Most emergency-response and policy topics (6 of 10) never were, even at the same rated depth.</p></div>
   </div>
   <table style="margin-top:22px">
