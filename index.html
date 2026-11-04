@@ -4,6 +4,9 @@
 <title>Depth vs Harm Pilot</title>
 <meta name="description" content="On 75 expert-screened, benign chemical-threat questions, Claude&#39;s API safety classifier refused 1% of less technical and 76% of highly technical prompts. A pilot study by Eduardo A González, PhD.">
 <link rel="canonical" href="https://eagonzalez101.github.io/depth-vs-harm/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5f6b'/%3E%3Crect x='7' y='21' width='5' height='4' rx='1' fill='%239cc3c9'/%3E%3Crect x='13.5' y='14' width='5' height='11' rx='1' fill='%23e9f1f2'/%3E%3Crect x='20' y='7' width='5' height='18' rx='1' fill='%23e98a70'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14181c" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Depth vs Harm Pilot">
 <meta property="og:title" content="Does Claude&#39;s safety classifier mistake depth for danger?">
@@ -12,7 +15,7 @@
 <meta property="og:image" content="https://eagonzalez101.github.io/depth-vs-harm/figures/social_preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Refusals rose from 1% of less technical to 43% of more technical and 76% of highly technical prompts.">
+<meta property="og:image:alt" content="Refusals rose from 1% to 76% as prompts got more technical: 1% of less technical, 43% of more technical and 76% of highly technical prompts refused.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Does Claude&#39;s safety classifier mistake depth for danger?">
 <meta name="twitter:description" content="On 75 expert-screened, benign chemical-threat questions, Claude&#39;s API safety classifier refused 1% of less technical and 76% of highly technical prompts. A pilot study by Eduardo A González, PhD.">
@@ -99,6 +102,17 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle}
 footer{padding:36px 0 64px;font-size:14px;color:var(--muted)}
 footer a{color:var(--accent)}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.btn{transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+.btn:hover{background:var(--soft)}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+a{text-underline-offset:3px}
+footer a{text-decoration-thickness:1px;transition:color .15s ease}
+footer a:hover{color:var(--ink)}
+.cite{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line);overflow-wrap:anywhere}.cite b{color:var(--ink);font-weight:600}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+#results{scroll-margin-top:16px}
 @media (max-width:640px){.stats,.two{grid-template-columns:1fr}header{padding-top:48px}}
 </style></head>
 <body>
@@ -171,6 +185,6 @@ footer a{color:var(--accent)}
   </ul>
 </section>
 
-<footer>Full methods, complete results, analysis scripts and data are in the <a href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/methodology.md">methodology</a>, the <a href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/results.md">full results</a> and the <a href="https://github.com/eagonzalez101/depth-vs-harm">GitHub repository</a>.</footer>
+<footer>Full methods, complete results, analysis scripts and data are in the <a href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/methodology.md">methodology</a>, the <a href="https://github.com/eagonzalez101/depth-vs-harm/blob/main/docs/results.md">full results</a> and the <a href="https://github.com/eagonzalez101/depth-vs-harm">GitHub repository</a>.<p class="cite"><b>How to cite:</b> González EA. Does Claude's safety classifier mistake depth for danger? A pilot study. November 2026. https://eagonzalez101.github.io/depth-vs-harm/</p></footer>
 </div>
 </body></html>
