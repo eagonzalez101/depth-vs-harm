@@ -6,9 +6,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbfaf7;--ink:#1d2228;--muted:#5d6670;--line:#e2ded6;--card:#fff;--accent:#1f5f6b;--accent2:#c4553a;--soft:#e9f1f2}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181c;--ink:#e8ebee;--muted:#9aa4ad;--line:#2b333a;--card:#1b2026;--accent:#6fb7c2;--accent2:#e98a70;--soft:#1f2c30}}
-:root[data-theme="dark"]{--bg:#14181c;--ink:#e8ebee;--muted:#9aa4ad;--line:#2b333a;--card:#1b2026;--accent:#6fb7c2;--accent2:#e98a70;--soft:#1f2c30}
+:root{--bg:#fbfaf7;--ink:#1d2228;--muted:#5d6670;--line:#e2ded6;--card:#fff;--accent:#1f5f6b;--accent2:#c4553a;--soft:#e9f1f2;--bio1:#c4553a;--bio2:#eab3a4;--resp1:#1f5f6b;--resp2:#9cc3c9;--never:#e7e3dc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181c;--ink:#e8ebee;--muted:#9aa4ad;--line:#2b333a;--card:#1b2026;--accent:#6fb7c2;--accent2:#e98a70;--soft:#1f2c30;--bio1:#c4553a;--bio2:#7a4537;--resp1:#2f7f8c;--resp2:#2c5258;--never:#2a3036}}
+:root[data-theme="dark"]{--bg:#14181c;--ink:#e8ebee;--muted:#9aa4ad;--line:#2b333a;--card:#1b2026;--accent:#6fb7c2;--accent2:#e98a70;--soft:#1f2c30;--bio1:#c4553a;--bio2:#7a4537;--resp1:#2f7f8c;--resp2:#2c5258;--never:#2a3036}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,sans-serif}
 .wrap{max-width:860px;margin:0 auto;padding:0 20px}
@@ -40,6 +40,22 @@ h2{font-family:"Source Serif 4",Georgia,serif;font-size:28px;margin:0 0 16px;fon
 .mb .v{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:3px}
 .mb .k{position:absolute;bottom:-20px;font-size:12px;color:var(--muted)}
 .mbcap{font-size:12px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:0}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted);margin:18px 0 14px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.lg{display:inline-block;width:22px;height:12px;border-radius:3px;background:linear-gradient(90deg,var(--bio1) 0 50%,var(--resp1) 50% 100%)}
+.lg.s2{background:linear-gradient(90deg,var(--bio2) 0 50%,var(--resp2) 50% 100%)}.lg.s3{background:var(--never)}
+.domains{display:flex;flex-direction:column;gap:8px}
+.grp{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin:12px 0 2px}
+.grp.bio{color:var(--accent2)}.grp.resp{color:var(--accent)}
+.drow{display:grid;grid-template-columns:250px 1fr;gap:14px;align-items:center}
+.dname{font-size:15px}
+.dot.bio{background:var(--accent2)}.dot.resp{background:var(--accent)}
+.dbar{display:flex;gap:2px;height:28px;border-radius:6px;overflow:hidden}
+.seg{display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600;min-width:0}
+.seg.bio.s1{background:var(--bio1);color:#fff}.seg.bio.s2{background:var(--bio2);color:var(--ink)}
+.seg.resp.s1{background:var(--resp1);color:#fff}.seg.resp.s2{background:var(--resp2);color:var(--ink)}
+.seg.s3{background:var(--never);color:var(--muted)}
+@media (max-width:640px){.drow{grid-template-columns:1fr;gap:4px}}
 ul{padding-left:20px;margin:0}li{margin:6px 0}
 table{width:100%;border-collapse:collapse;font-size:15px}
 th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:500;font-size:13px}th.num{text-align:right}
@@ -75,20 +91,21 @@ footer a{color:var(--accent)}
 </section>
 
 <section>
-  <h2>Two findings beneath the headline</h2>
+  <h2>Depth itself drives refusals</h2>
   <div class="two">
     <div class="card"><div class="big">0% → 81%</div><h3>Same pattern on the expert's own scale</h3><p>As a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, while prompt length made little difference.</p>
       <div class="minibars" role="img" aria-label="Share of responses refused by depth rating: 1, 0%; 2, 3%; 3, 43%; 4, 73%; 5, 81%"><div class="mb"><span class="v">0%</span><i style="height:2px"></i><span class="k">1</span></div><div class="mb"><span class="v">3%</span><i style="height:2px"></i><span class="k">2</span></div><div class="mb"><span class="v">43%</span><i style="height:34px"></i><span class="k">3</span></div><div class="mb"><span class="v">73%</span><i style="height:58px"></i><span class="k">4</span></div><div class="mb"><span class="v">81%</span><i style="height:65px"></i><span class="k">5</span></div></div><div class="mbcap">Responses refused, by blind depth rating (1–5)</div></div>
-    <div class="card"><div class="big">15 of 15</div><h3>Biomedical topics refused</h3><p>Every topic about what agents do to the body was refused at some level. Most emergency-response and policy topics (6 of 10) never were, even at the same rated depth.</p></div>
+    <div class="card"><div class="big">0% → 100%</div><h3>Deeper means refused, even within one level</h3><p>Among the undergraduate (L2) prompts alone, none rated 1–2 on the expert's scale were refused, half rated 3 were, and every prompt rated 4 was. Same level, same length: the deeper ones were blocked.</p>
+      <div class="minibars" role="img" aria-label="Undergraduate prompts refused by depth rating: rated 1 to 2, 0%; rated 3, 50%; rated 4, 100%"><div class="mb"><span class="v">0%</span><i style="height:2px"></i><span class="k">1–2</span></div><div class="mb"><span class="v">50%</span><i style="height:40px"></i><span class="k">3</span></div><div class="mb"><span class="v">100%</span><i style="height:80px"></i><span class="k">4</span></div></div><div class="mbcap">Undergraduate (L2) prompts refused, by blind depth rating</div></div>
   </div>
-  <table style="margin-top:22px">
-    <tr><th>Domain</th><th class="num">Topics</th><th class="num">Refused from L2</th><th class="num">L3 only</th><th class="num">Never</th></tr>
-    <tr><td><span class="dot" style="background:var(--accent2)"></span>Clinical toxicology</td><td class="num">4</td><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
-    <tr><td><span class="dot" style="background:var(--accent2)"></span>Medical countermeasures</td><td class="num">4</td><td class="num">3</td><td class="num">1</td><td class="num">0</td></tr>
-    <tr><td><span class="dot" style="background:var(--accent2)"></span>Mechanism of toxicity</td><td class="num">7</td><td class="num">5</td><td class="num">2</td><td class="num">0</td></tr>
-    <tr><td><span class="dot" style="background:var(--accent)"></span>Detection and decontamination</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num">3</td></tr>
-    <tr><td><span class="dot" style="background:var(--accent)"></span>History and policy</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td class="num">3</td></tr>
-  </table>
+</section>
+
+<section>
+  <h2>Refusals concentrate on biomedical questions</h2>
+  <p>Every topic about what chemical agents do to the body was refused at some depth. Most topics about emergency response and policy were never refused, even when the expert rated them just as deep.</p>
+  <div class="legend"><span><i class="lg s1"></i>Refused from undergraduate level (L2)</span><span><i class="lg s2"></i>Refused at graduate level (L3) only</span><span><i class="lg s3"></i>Never refused</span></div>
+  <div class="domains"><div class="grp bio">Biomedical: what agents do to the body</div><div class="drow"><div class="dname"><span class="dot bio"></span>Clinical toxicology</div><div class="dbar" role="img" aria-label="Clinical toxicology: 50% refused from L2, 50% refused at L3 only, 0% never refused"><span class="seg bio s1" style="flex:50">50%</span><span class="seg bio s2" style="flex:50">50%</span></div></div><div class="drow"><div class="dname"><span class="dot bio"></span>Medical countermeasures</div><div class="dbar" role="img" aria-label="Medical countermeasures: 75% refused from L2, 25% refused at L3 only, 0% never refused"><span class="seg bio s1" style="flex:75">75%</span><span class="seg bio s2" style="flex:25">25%</span></div></div><div class="drow"><div class="dname"><span class="dot bio"></span>Mechanism of toxicity</div><div class="dbar" role="img" aria-label="Mechanism of toxicity: 71% refused from L2, 29% refused at L3 only, 0% never refused"><span class="seg bio s1" style="flex:71">71%</span><span class="seg bio s2" style="flex:29">29%</span></div></div><div class="grp resp">Response and policy: systems, people and rules</div><div class="drow"><div class="dname"><span class="dot resp"></span>Detection and decontamination</div><div class="dbar" role="img" aria-label="Detection and decontamination: 20% refused from L2, 20% refused at L3 only, 60% never refused"><span class="seg resp s1" style="flex:20">20%</span><span class="seg resp s2" style="flex:20">20%</span><span class="seg s3" style="flex:60">60%</span></div></div><div class="drow"><div class="dname"><span class="dot resp"></span>History and policy</div><div class="dbar" role="img" aria-label="History and policy: 0% refused from L2, 40% refused at L3 only, 60% never refused"><span class="seg resp s2" style="flex:40">40%</span><span class="seg s3" style="flex:60">60%</span></div></div></div>
+  <p class="note">Share of topics in each domain, by the lowest depth level at which the classifier refused.</p>
 </section>
 
 <section>
