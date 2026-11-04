@@ -32,9 +32,9 @@ h2{font-family:"Source Serif 4",Georgia,serif;font-size:28px;margin:0 0 16px;fon
 .stat .a{font-size:13.5px;color:var(--muted)}
 .intro{font-family:"Source Serif 4",Georgia,serif;font-size:21px;font-weight:600;color:var(--ink);margin:4px 0 0;line-height:1.35}
 .gt{font-size:14px;font-weight:700;color:var(--ink);margin:18px 0 0}
-.dir{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:8px}
-.dir:after{content:"";flex:1;height:0;border-top:1.5px solid var(--muted);order:-1}
-.dir span:after{content:" →"}
+.dir{display:flex;align-items:center;gap:8px;font-size:12px;font-style:italic;color:var(--muted);margin-top:26px}
+.dir:before,.dir:after{content:"";flex:1;height:0;border-top:1.5px solid var(--muted)}
+.dir span{white-space:nowrap;order:-1}.dir:before{order:-2}.dir b{order:1;width:0;height:0;border-left:7px solid var(--muted);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:-9px}
 .bar{height:8px;background:var(--soft);border-radius:4px;margin-top:12px;overflow:hidden}.bar i{display:block;height:100%;background:currentColor}
 .note{font-size:14px;color:var(--muted)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -106,7 +106,7 @@ footer a{color:var(--accent)}
   <div class="stats">
     <div class="stat" style="color:var(--accent)"><div class="n">1%<span class="u">refused</span></div><div class="t">Less technical prompts</div><div class="a">(General public)</div><div class="l">1 of 75 responses</div><div class="bar"><i style="width:1.3%"></i></div></div>
     <div class="stat" style="color:var(--accent)"><div class="n">43%<span class="u">refused</span></div><div class="t">More technical prompts</div><div class="a">(College students)</div><div class="l">32 of 75 responses</div><div class="bar"><i style="width:42.7%"></i></div></div>
-    <div class="stat" style="color:var(--accent2)"><div class="n hi">76%<span class="u">refused</span></div><div class="t">Highly technical prompts</div><div class="a">(Clinician or researcher)</div><div class="l">57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
+    <div class="stat" style="color:var(--accent2)"><div class="n hi">76%<span class="u">refused</span></div><div class="t">Highly technical prompts</div><div class="a">(Clinicians or researchers)</div><div class="l">57 of 75 responses</div><div class="bar"><i style="width:76%"></i></div></div>
   </div>
   <p class="note">Classifier refusals across 25 topics × 3 depths × 3 runs. Within-topic permutation test, p &lt; 0.0001. No topic was ever refused less at a deeper level.</p>
 </section>
@@ -115,12 +115,12 @@ footer a{color:var(--accent)}
   <h2>Evidence that depth itself drives refusals</h2>
   <div class="two">
     <div class="card"><h3>Same pattern on the expert's own scale</h3><p>As a check on the three levels, the expert also rated every prompt's depth from 1 (news level) to 5 (specialist), blind to its level. Refusals climbed with that rating too, while prompt length made little difference.</p>
-      <div class="gt">Refusals: 0% → 81%</div><div class="minibars" role="img" aria-label="Share of responses refused by depth rating: 1, 0%; 2, 3%; 3, 43%; 4, 73%; 5, 81%"><div class="mb"><span class="v">0%</span><i style="height:2px"></i><span class="k">1</span></div><div class="mb"><span class="v">3%</span><i style="height:2px"></i><span class="k">2</span></div><div class="mb"><span class="v">43%</span><i style="height:34px"></i><span class="k">3</span></div><div class="mb"><span class="v">73%</span><i style="height:58px"></i><span class="k">4</span></div><div class="mb"><span class="v">81%</span><i style="height:65px"></i><span class="k">5</span></div></div><div class="mbcap">Responses refused, by blind depth rating (1–5)</div><div class="dir"><span>Increasing technical depth</span></div></div>
-    <div class="card"><h3>Refused prompts were rated deeper, even at the same level</h3><p>Among the more technical (college-level) prompts alone, the ones the classifier refused averaged 3.3 on the expert's 1–5 scale. The ones it answered averaged 2.4. Their length was about the same.</p>
+      <div class="gt">Refusals: 0% → 81%</div><div class="minibars" role="img" aria-label="Share of responses refused by depth rating: 1, 0%; 2, 3%; 3, 43%; 4, 73%; 5, 81%"><div class="mb"><span class="v">0%</span><i style="height:2px"></i><span class="k">1</span></div><div class="mb"><span class="v">3%</span><i style="height:2px"></i><span class="k">2</span></div><div class="mb"><span class="v">43%</span><i style="height:34px"></i><span class="k">3</span></div><div class="mb"><span class="v">73%</span><i style="height:58px"></i><span class="k">4</span></div><div class="mb"><span class="v">81%</span><i style="height:65px"></i><span class="k">5</span></div></div><div class="dir"><span>Increasing technical depth</span><b></b></div><div class="mbcap" style="margin-top:10px">Responses refused, by blind depth rating (1–5)</div></div>
+    <div class="card"><h3>Refused prompts were rated deeper by the expert, even within a depth level</h3><p>Within the college-level prompts alone, the refused ones averaged 3.3 on the expert's 1–5 scale. The answered ones averaged 2.4. Their length was about the same.</p>
 <div class="gt">Depth rating: 3.3 vs 2.4</div><div class="track"><div class="line"></div><span class="tk" style="left:0.0%">1</span><span class="tk" style="left:25.0%">2</span><span class="tk" style="left:50.0%">3</span><span class="tk" style="left:75.0%">4</span><span class="tk" style="left:100.0%">5</span>
 <span class="mk" style="left:35.8%;background:var(--muted)"></span><span class="mkl" style="left:35.8%;top:0;color:var(--muted)">answered<br><b style="color:var(--ink)">2.4</b></span>
 <span class="mk" style="left:56.8%;background:var(--accent)"></span><span class="mkl" style="left:56.8%;top:0;color:var(--accent)">refused<br><b style="color:var(--ink)">3.3</b></span></div>
-<div class="mbcap" style="margin-top:12px">Average blind depth rating of the more technical (college-level) prompts</div></div>
+<div class="mbcap" style="margin-top:12px">Average blind depth rating of the college-level prompts</div></div>
   </div>
 </section>
 
